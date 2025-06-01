@@ -18,11 +18,11 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
                     Martin Johnson
                     <span className="w-2 h-2 rounded-full bg-green-500"></span>
                 </p>
-                <img onClick={() => setSelectedUser(null)} src={assets.arrow_icon} alt="" className="max-md:hidden max-w-7" />
+                <img onClick={() => setSelectedUser(null)} src={assets.arrow_icon} alt="" className="md:hidden max-w-7" />
                 <img src={assets.help_icon} alt="" className="max-md:hidden max-w-5" />
             </div>
             {/* ---------- chat area ----------- */}
-            <div className="flex flex-col h-[calc(100%-12px)] overflow-y-scroll no-scrollbar p-3 pb-6">
+            <div className="flex flex-col h-[calc(100%-110px)] overflow-y-scroll no-scrollbar p-3 pb-6">
                 {
                     messagesDummyData.map((msg, index) => (
                         <div key={index} className={`flex items-end gap-2 justify-end ${msg.senderId !== '680f50e4f10f3cd28382ecf9' && 'flex-row-reverse'}`}>
